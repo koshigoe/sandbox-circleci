@@ -9,6 +9,12 @@ jobs:
       - run:
           name: Echo
           command: echo OK
+      - run:
+          name: List
+          command: ls
+      - run:
+          name: PWD
+          command: pwd
 
 workflows:
   version: 2
