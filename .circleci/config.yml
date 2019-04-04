@@ -2,8 +2,14 @@ version: 2.1
 
 jobs:
   build:
+    environment:
+      HOGE: a
     docker:
       - image: circleci/golang
+      - image: circleci/golang
+        environment:
+          HOGE:
+        entrypoint: env
     steps:
       - checkout
       - run:
