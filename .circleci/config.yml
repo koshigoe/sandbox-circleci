@@ -2,8 +2,12 @@ version: 2.1
 
 jobs:
   build:
+    environment:
+      X: x
     docker:
       - image: circleci/golang
+      - image: circleci/golang
+        entrypoint: env
     steps:
       - checkout
       - run:
