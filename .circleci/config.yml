@@ -8,6 +8,12 @@ jobs:
           HOGE: hoge
           X_HOGE: $X_HOGE
           foo:
+      - image: circleci/golang
+        environment:
+          HOGE: hoge
+          X_HOGE: $X_HOGE
+          foo:
+        entrypoint: env
     steps:
       - checkout
       - run:
