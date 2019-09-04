@@ -4,6 +4,10 @@ jobs:
   build:
     docker:
       - image: circleci/golang
+        environment:
+          HOGE: hoge
+          X_HOGE: $X_HOGE
+          foo:
     steps:
       - checkout
       - run:
@@ -15,6 +19,9 @@ jobs:
       - run:
           name: PWD
           command: pwd
+      - run:
+          name: env
+          command: env
 
 workflows:
   version: 2
